@@ -1,0 +1,7 @@
+[package]
+name = "class-note"
+version = "0.1.0"
+entrypoint = "classnotes.typ"
+authors = ["Aurghyadip Kundu <https://github.com/aurghya-0>"]
+license = "MIT-0"
+description = "A simple note taking template with support for question and answers, theorem, callouts and definitions."
