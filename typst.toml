@@ -1,7 +1,10 @@
 [package]
 name = "class-note"
-version = "0.1.0"
+version = "0.2.0"
 entrypoint = "classnotes.typ"
 authors = ["Aurghyadip Kundu <https://github.com/aurghya-0>"]
 license = "MIT-0"
-description = "A simple note taking template with support for question and answers, theorem, callouts and definitions."
+description = "A clean, modern, and rich academic note-taking template for Typst with support for theorems, proofs, definitions, callouts, code blocks, and question-answer sets."
+keywords = ["notes", "classnotes", "template", "theorem", "callout", "qna", "lecture-notes"]
+repository = "https://github.com/aurghya-0/class-note"
+compiler = "0.11.0"
