@@ -4,6 +4,24 @@ A clean, modern, and rich academic lecture note template for [Typst](https://typ
 
 ---
 
+## 📸 Preview
+
+<div align="center">
+  <p><strong>Outcome-Based Education (OBE) Framework & CO-PO Articulation Matrix</strong></p>
+  <img src="assets/preview-1.png" alt="OBE Header & Course Outcomes Matrix" width="100%" />
+  <br /><br />
+  <p><strong>Bloom's Taxonomy Guide, Section Tags & Lecture Notes</strong></p>
+  <img src="assets/preview-2.png" alt="Bloom's Taxonomy Guide & Notes" width="100%" />
+  <br /><br />
+  <p><strong>OBE-Tagged Practice Questions & Marking Rubrics</strong></p>
+  <img src="assets/preview-4.png" alt="OBE Questions & Rubrics" width="100%" />
+  <br /><br />
+  <p><strong>OBE Assessment Outcome Summary Table</strong></p>
+  <img src="assets/preview-5.png" alt="OBE Outcome Coverage Summary" width="100%" />
+</div>
+
+---
+
 ## ✨ Features
 
 - 🎨 **Hero Card & Header Banner**: Elegant document header with customizable title, subtitle, faculty, course code, department, degree program, academic year, semester, and date.
