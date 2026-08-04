@@ -13,6 +13,7 @@
   academic_year: "2026-2027",
   date: "August 3, 2026",
   accent: rgb("#1e3a8a"),
+  font_style: "sans", // Options: "sans" or "serif"
 )
 
 = Outcome-Based Education (OBE) Framework

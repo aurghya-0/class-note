@@ -150,6 +150,12 @@
   }
 }
 
+// Predefined font family presets
+#let font-presets = (
+  sans: ("DejaVu Sans", "Liberation Sans", "Ubuntu Sans", "Nimbus Sans", "Noto Sans"),
+  serif: ("DejaVu Serif", "Liberation Serif", "Nimbus Roman", "Noto Serif", "Times New Roman"),
+)
+
 // Main template function
 #let classnote(
   title: "",
@@ -166,11 +172,27 @@
   accent: rgb("#1e3a8a"),
   paper: "a4",
   margin: (x: 2cm, y: 2.5cm),
-  font: ("DejaVu Sans", "Ubuntu Sans", "Nimbus Sans"),
+  font_style: "sans", // "sans" or "serif"
+  font: auto,
   body
 ) = {
   let accent-color = parse-color(accent, default: rgb("#1e3a8a"))
   
+  // Resolve font selection (supports font_style: "sans"/"serif" or font: "serif"/"sans" or custom font array)
+  let selected-font = if font != auto and font != none {
+    if font == "sans" {
+      font-presets.sans
+    } else if font == "serif" {
+      font-presets.serif
+    } else {
+      font
+    }
+  } else if font_style == "serif" {
+    font-presets.serif
+  } else {
+    font-presets.sans
+  }
+
   // Document metadata
   set document(
     author: if faculty != "" { (faculty,) } else { () },
@@ -178,7 +200,7 @@
   )
   
   // Set font family and text settings
-  set text(font: font, size: 10.5pt, fill: rgb("#1f2937"))
+  set text(font: selected-font, size: 10.5pt, fill: rgb("#1f2937"))
   set par(justify: true, leading: 0.65em)
   
   // Heading styling

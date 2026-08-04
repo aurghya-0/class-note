@@ -4,27 +4,59 @@ A clean, modern, and rich academic lecture note template for [Typst](https://typ
 
 ---
 
-## 📸 Preview
+## 📸 Side-by-Side Visual Comparison
 
-<div align="center">
-  <p><strong>Outcome-Based Education (OBE) Framework & CO-PO Articulation Matrix</strong></p>
-  <img src="assets/preview-1.png" alt="OBE Header & Course Outcomes Matrix" width="100%" />
-  <br /><br />
-  <p><strong>Bloom's Taxonomy Guide, Section Tags & Lecture Notes</strong></p>
-  <img src="assets/preview-2.png" alt="Bloom's Taxonomy Guide & Notes" width="100%" />
-  <br /><br />
-  <p><strong>OBE-Tagged Practice Questions & Marking Rubrics</strong></p>
-  <img src="assets/preview-4.png" alt="OBE Questions & Rubrics" width="100%" />
-  <br /><br />
-  <p><strong>OBE Assessment Outcome Summary Table</strong></p>
-  <img src="assets/preview-5.png" alt="OBE Outcome Coverage Summary" width="100%" />
-</div>
+Choose between **Modern Sans-Serif** (clean, modern UI styling) and **Classic Serif** (traditional academic journal styling) with a single parameter!
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="center" width="50%">🎨 Modern Sans-Serif (Default)<br/><code>font_style: "sans"</code></th>
+      <th align="center" width="50%">📜 Classic Serif (Academic)<br/><code>font_style: "serif"</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>OBE Header & CO-PO Articulation Matrix</strong></td>
+      <td align="center"><strong>OBE Header & CO-PO Articulation Matrix</strong></td>
+    </tr>
+    <tr>
+      <td><img src="assets/preview-sans-1.png" alt="Sans-Serif OBE Framework" width="100%"/></td>
+      <td><img src="assets/preview-serif-1.png" alt="Serif OBE Framework" width="100%"/></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Bloom's Taxonomy Guide & Notes</strong></td>
+      <td align="center"><strong>Bloom's Taxonomy Guide & Notes</strong></td>
+    </tr>
+    <tr>
+      <td><img src="assets/preview-sans-2.png" alt="Sans-Serif Notes & Bloom Guide" width="100%"/></td>
+      <td><img src="assets/preview-serif-2.png" alt="Serif Notes & Bloom Guide" width="100%"/></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>OBE Tagged Questions & Rubrics</strong></td>
+      <td align="center"><strong>OBE Tagged Questions & Rubrics</strong></td>
+    </tr>
+    <tr>
+      <td><img src="assets/preview-sans-4.png" alt="Sans-Serif Questions & Rubrics" width="100%"/></td>
+      <td><img src="assets/preview-serif-4.png" alt="Serif Questions & Rubrics" width="100%"/></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Assessment Outcome Summary Table</strong></td>
+      <td align="center"><strong>Assessment Outcome Summary Table</strong></td>
+    </tr>
+    <tr>
+      <td><img src="assets/preview-sans-5.png" alt="Sans-Serif Outcome Summary" width="100%"/></td>
+      <td><img src="assets/preview-serif-5.png" alt="Serif Outcome Summary" width="100%"/></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## ✨ Features
 
-- 🎨 **Hero Card & Header Banner**: Elegant document header with customizable title, subtitle, faculty, course code, department, degree program, academic year, semester, and date.
+- 🎨 **Font Style Options**: Built-in presets to switch instantly between **Sans-Serif** (`"sans"`) and **Serif** (`"serif"`), or specify custom font fallback arrays.
+- 🖼️ **Hero Card & Header Banner**: Elegant document header with customizable title, subtitle, faculty, course code, department, degree program, academic year, semester, and date.
 - 🎓 **Outcome-Based Education (OBE) Support**: Native components for Course Outcomes (COs), Program Outcomes (POs), Bloom's Taxonomy levels (L1–L6), CO-PO Articulation Matrices, marking rubrics, and assessment summaries.
 - 📐 **Theorem & Math Environments**: Built-in support for `#theorem`, `#lemma`, `#proposition`, `#corollary`, `#definition`, `#example`, and `#proof` (with auto Q.E.D. $square$ symbol).
 - 💬 **Rich Callouts**: Built-in callout cards for `#callout(type: "info" | "tip" | "warning" | "important" | "note")` as well as custom background colors.
@@ -55,6 +87,7 @@ Import `classnotes.typ` into your document:
   academic_year: "2026-2027",
   date: "August 3, 2026",
   accent: rgb("#1e3a8a"),
+  font_style: "sans", // Options: "sans" or "serif"
 )
 
 = Outcome-Based Education (OBE) Framework
@@ -102,8 +135,10 @@ Import `classnotes.typ` into your document:
 | `code` | `str` | `""` | Course code (e.g. `"ESCS201"`) |
 | `date` | `str` / `content` | `""` | Lecture date |
 | `accent` | `color` / `str` | `rgb("#1e3a8a")` | Primary theme accent color |
+| `font_style` | `str` | `"sans"` | Font family style preset (`"sans"` or `"serif"`) |
+| `font` | `auto` / `str` / `array` | `auto` | Custom font family array or `"sans"` / `"serif"` preset |
 | `paper` | `str` | `"a4"` | Paper size |
-| `font` | `array` / `str` | `("DejaVu Sans", ...)` | Font family fallback list |
+| `margin` | `dictionary` | `(x: 2cm, y: 2.5cm)` | Page margins |
 
 ---
 
